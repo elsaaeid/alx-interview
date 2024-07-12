@@ -8,17 +8,15 @@ def minOperations(n):
     in exactly n H characters.
     """
     if n <= 1:
-        return 0
+                return 0
 
-    operations = [0] * (n + 1)
+                operations = 0
+                    divisor = 2
 
-    for i in range(2, n + 1):
-        if n % i == 0:
-            operations[i] = i
-            continue
-        for j in range(i // 2, 1, -1):
-            if i % j == 0:
-                operations[i] = operations[j] + (i // j)
-                break
+                        while n > 1:
+                                    while n % divisor == 0:
+                                                    operations += divisor
+                                                                n //= divisor
+                                                                        divisor += 1
 
-    return operations[n]
+                                                                            return operations

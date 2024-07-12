@@ -1,22 +1,19 @@
 #!/usr/bin/python3
 """
-The minimum operations.
+minimum_operations
 """
 
+
 def minOperations(n):
-    """A method that computes the fewest number of operations needed to result
-    in exactly n H characters.
     """
-    if n <= 1:
-        return 0
-
-    operations = 0
-    divisor = 2
-
+    A method that calculates the fewest number of
+    operations needed to result in exactly n H characters
+    """
+    i = 0
+    j = 2
     while n > 1:
-        while n % divisor == 0:
-            operations += divisor
-            n //= divisor
-                divisor += 1
-
-    return operations
+        while n % j == 0:
+            i += j
+            n /= j
+        j += 1
+    return i

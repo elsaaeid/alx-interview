@@ -5,7 +5,7 @@ A script that reads stdin line by line and computes metrics.
 import sys
 
 
-def print_statistics(codes, file_size):
+def print_output(codes, file_size):
     print("File size: {}".format(file_size))
     for key, val in sorted(codes.items()):
         if val != 0:
@@ -42,8 +42,8 @@ try:
                     codes[code] += 1
 
             if (count_lines == 10):
-                print_statistics(codes, file_size)
+                print_output(codes, file_size)
                 count_lines = 0
 
 finally:
-    print_statistics(codes, file_size)
+    print_output(codes, file_size)

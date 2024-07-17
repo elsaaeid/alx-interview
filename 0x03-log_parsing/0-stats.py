@@ -27,7 +27,8 @@ codes = {
 }
 
 try:
-    for line in sys.stdin:
+    line = sys.stdin.readline()
+    while line:
         splt_line = line.split()
         splt_line = splt_line[::-1]
 
@@ -44,6 +45,8 @@ try:
             if (count_lines == 10):
                 print_output(codes, file_size)
                 count_lines = 0
+
+        line = sys.stdin.readline()
 
 finally:
     print_output(codes, file_size)

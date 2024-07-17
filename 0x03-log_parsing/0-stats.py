@@ -5,48 +5,45 @@ A script that reads stdin line by line and computes metrics.
 import sys
 
 
-def compute_metrics():
-    """Function that reads stdin line
-    by line and computes metrics.
-    """
-    # Initialize variables
-    total_size = 0
-    status_codes = {}
+def print_statistics(codes, file_size):
+    print("File size: {}".format(file_size))
+    for key, val in sorted(codes.items()):
+        if val != 0:
+            print("{}: {}".format(key, val))
 
-    try:
-        # Read input from stdin line by line
-        for line_number, line in enumerate(sys.stdin, start=1):
-            # Split the line into its components
-            parts = line.split()
 
-            # Check if the line has the expected format
-            if len(parts) != 7:
-                continue
+file_size = 0
+code = 0
+count_lines = 0
+codes = {
+    "200": 0,
+    "301": 0,
+    "400": 0,
+    "401": 0,
+    "403": 0,
+    "404": 0,
+    "405": 0,
+    "500": 0
+}
 
-            # Extract the file size and status code
-            file_size = int(parts[6])
-            status_code = int(parts[5])
+try:
+    for line in sys.stdin:
+        splt_line = line.split()
+        splt_line = splt_line[::-1]
 
-            # Update the total file size
-            total_size += file_size
+        if len(splt_line) > 2:
+            count_lines += 1
 
-            # Update the count for the status code
-            if status_code in status_codes:
-                status_codes[status_code] += 1
-            else:
-                status_codes[status_code] = 1
+            if count_lines <= 10:
+                file_size += int(splt_line[0])
+                code = splt_line[1]
 
-            # Print statistics every 10 lines
-            if line_number % 10 == 0:
-                print(f"Total file size: {total_size}")
-                for code in sorted(status_codes.keys()):
-                    print(f"{code}: {status_codes[code]}")
+                if (code in codes.keys()):
+                    codes[code] += 1
 
-    except KeyboardInterrupt:
-        # Handle keyboard interruption (CTRL + C)
-        print(f"Total file size: {total_size}")
-        for code in sorted(status_codes.keys()):
-            print(f"{code}: {status_codes[code]}")
+            if (count_lines == 10):
+                print_statistics(codes, file_size)
+                count_lines = 0
 
-# Call the compute_metrics function
-compute_metrics()
+finally:
+    print_statistics(codes, file_size)

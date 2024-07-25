@@ -10,24 +10,24 @@ def validUTF8(data):
     is a valid UTF-8 encoding,
     else return False
     """
-    expected_length = 0
-    for num in data:
-        binary_num = bin(num)[2:].zfill(8)
-
-        if expected_length == 0:
-            if binary_num.startswith("0"):
+    count = 0
+    for byte in data:
+        if not 0 <= byte <= 255:
+            return False
+        if count == 0:
+            if byte >> 7 == 0b0:
                 continue
-            elif binary_num.startswith("110"):
-                expected_length = 2
-            elif binary_num.startswith("1110"):
-                expected_length = 3
-            elif binary_num.startswith("11110"):
-                expected_length = 4
+            elif byte >> 5 == 0b110:
+                count = 1
+            elif byte >> 4 == 0b1110:
+                count = 2
+            elif byte >> 3 == 0b11110:
+                count = 3
             else:
                 return False
         else:
-            if not binary_num.startswith("10"):
+            if byte >> 6 == 0b10:
+                count -= 1
+            else:
                 return False
-            expected_length -= 1
-
-    return expected_length == 0
+    return count == 0

@@ -10,7 +10,7 @@ def validUTF8(data):
     is a valid UTF-8 encoding,
     else return False
     """
-
+    expected_length = 0
     for num in data:
         binary_num = bin(num)[2:].zfill(8)
 

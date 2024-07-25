@@ -13,7 +13,7 @@ def validUTF8(data):
 
     for num in data:
         binary_num = bin(num)[2:].zfill(8)
-        
+
         if expected_length == 0:
             if binary_num.startswith("0"):
                 continue

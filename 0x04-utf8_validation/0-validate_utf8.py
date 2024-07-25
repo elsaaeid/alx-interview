@@ -30,4 +30,4 @@ def validUTF8(data):
                 count -= 1
             else:
                 return False
-    return True
+    return count == 0

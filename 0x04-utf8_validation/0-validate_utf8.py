@@ -11,9 +11,10 @@ def validUTF8(data):
     else return False
     """
     count = 0
+    index = 0
 
-    for bit in data:
-        binary = bin(bit).replace('0b', '').rjust(8, '0')[-8:]
+    while index < len(data):
+        binary = bin(data[index]).replace('0b', '').rjust(8, '0')[-8:]
         if count == 0:
             if binary.startswith('110'):
                 count = 1
@@ -28,7 +29,9 @@ def validUTF8(data):
                 return False
             count -= 1
 
+        index += 1
+
     if count != 0:
         return False
 
-    return True
+    return True

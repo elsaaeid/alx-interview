@@ -11,23 +11,24 @@ def validUTF8(data):
     else return False
     """
     count = 0
-    for byte in data:
-        if not 0 <= byte <= 255:
-            return False
+
+    for bit in data:
+        binary = bin(bit).replace('0b', '').rjust(8, '0')[-8:]
         if count == 0:
-            if byte >> 7 == 0b0:
-                continue
-            elif byte >> 5 == 0b110:
+            if binary.startswith('110'):
                 count = 1
-            elif byte >> 4 == 0b1110:
+            if binary.startswith('1110'):
                 count = 2
-            elif byte >> 3 == 0b11110:
+            if binary.startswith('11110'):
                 count = 3
-            else:
+            if binary.startswith('10'):
                 return False
         else:
-            if byte >> 6 == 0b10:
-                count -= 1
-            else:
+            if not binary.startswith('10'):
                 return False
-    return count == 0
+            count -= 1
+
+    if count != 0:
+        return False
+
+    return True

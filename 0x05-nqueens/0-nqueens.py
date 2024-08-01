@@ -3,14 +3,17 @@
 """
 import sys
 
+
 def is_safe(board, row, col):
     """Check if a queen can be placed
     at the given position
     """
     for i in range(row):
-        if board[i] == col or board[i] - i == col - row or board[i] + i == col + row:
+        if board[i] == col or board[i] - i == col - row or
+        board[i] + i == col + row:
             return False
     return True
+
 
 def solve_nqueens(n, board, row=0):
     """Base case: all queens have been placed
@@ -27,6 +30,7 @@ def solve_nqueens(n, board, row=0):
         if is_safe(board, row, col):
             board[row] = col
             solve_nqueens(n, board, row + 1)
+
 
 if __name__ == "__main__":
     '''

@@ -7,10 +7,10 @@
 <h3>
   Concepts Needed:
 </h3>
-<ul>
-  <ol>
+<ol>
+  <li>
     Backtracking Algorithms:
-  </ol>
+  </li>
     <ul>
       <li>
         Understanding how backtracking algorithms work to explore all potential solutions to a problem and backtrack when a solution cannot be completed.
@@ -21,9 +21,9 @@
         </a>
       </li>
     </ul>
-    <ol>
+    <li>
     Recursion
-    </ol>
+    </li>
     <ul>
       <li>
         Using recursive functions to implement backtracking algorithms.
@@ -34,9 +34,9 @@
         </a>
       </li>
     </ul>
-    <ol>
+    <li>
     List Manipulations in Python:
-    </ol>
+    </li>
     <ul>
       <li>
         Creating and manipulating lists, especially to store the positions of queens on the board.
@@ -46,10 +46,10 @@
          Python Lists 
         </a>
       </li>
-    </ul>    
-    <ol>
+    </ul>   
+    <li>
     Python Command Line Arguments:
-    </ol>
+    </li>
     <ul>
       <li>
         Handling command-line arguments with the sys module
@@ -61,3 +61,4 @@
       </li>
     </ul>    
 </ul>
+</ol>

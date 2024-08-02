@@ -1,4 +1,4 @@
-# alx-interview
+<img src="image.gif" />
 <p>
   Welcome to common challenges we face in software engineering projects that help us:
 </p>

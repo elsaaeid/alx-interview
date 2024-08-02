@@ -62,3 +62,11 @@
     </ul>    
 </ul>
 </ol>
+<h3>
+  Additional Resources
+</h3>
+<span>
+  <a href="https://intranet.alxswe.com/rltoken/aQ3uJmGVeZa-R6B1jYTjXg">
+    Mock Interview
+  </a>
+</span>

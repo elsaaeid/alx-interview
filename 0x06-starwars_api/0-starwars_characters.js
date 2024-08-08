@@ -9,10 +9,10 @@ const request = util.promisify(require('request'));
 const movieId = process.argv[2];
 
 async function getMovieCharacters (movieId) {
-  const endpoint = 'https://swapi-api.alx-tools.com/api/films/' + movieId;
-  let response = await (await request(endpoint)).body;
-  response = JSON.parse(response);
-  const characters = response.characters;
+  const movieUrl = 'https://swapi-api.alx-tools.com/api/films/' + movieId;
+  let movieData = await (await request(movieUrl)).body;
+  movieData = JSON.parse(movieData);
+  const characters = movieData.characters;
 
   for (let i = 0; i < characters.length; i++) {
     const urlCharacter = characters[i];

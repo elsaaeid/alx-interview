@@ -1,25 +1,20 @@
 #!/usr/bin/node
-/**
- * Entry point - makes requests to Star Wars API
- * for movie info based movie ID passed as a CLI parameter.
- * Retrieves movie character info then prints their names
- * in order of appearance in the initial response.
- */
-
 const util = require('util');
 const request = util.promisify(require('request'));
-const movieId = process.argv[2];
+const filmID = process.argv[2];
 
-async function getMovieCharacters (movieId) {
-  const movieUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
-  let response = await (await request(movieUrl)).body;
-  movieData = JSON.parse(response);
-  const characters = movieData.characters;
+async function starwarsCharacters (filmId) {
+  const endpoint = 'https://swapi-api.hbtn.io/api/films/' + filmId;
+  let response = await (await request(endpoint)).body;
+  response = JSON.parse(response);
+  const characters = response.characters;
 
-  for (const characterUrl of characters) {
-    const characterData = await request(characterUrl, { json: true });
-    console.log(characterData.name);
+  for (let i = 0; i < characters.length; i++) {
+    const urlCharacter = characters[i];
+    let character = await (await request(urlCharacter)).body;
+    character = JSON.parse(character);
+    console.log(character.name);
   }
 }
 
-getMovieCharacters(movieId);
+starwarsCharacters(filmID);

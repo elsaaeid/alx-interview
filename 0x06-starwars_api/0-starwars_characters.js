@@ -1,9 +1,14 @@
 #!/usr/bin/node
+/**
+ * Entry point - makes requests to Star Wars API
+ * for movie info based movie ID passed as a CLI parameter.
+ * Retrieves movie character info then prints their names
+ */
 const util = require('util');
 const request = util.promisify(require('request'));
 const movieId = process.argv[2];
 
-async function starwarsCharacters (movieId) {
+async function getMovieCharacters (movieId) {
   const endpoint = 'https://swapi-api.alx-tools.com/api/films/' + movieId;
   let response = await (await request(endpoint)).body;
   response = JSON.parse(response);
@@ -17,4 +22,4 @@ async function starwarsCharacters (movieId) {
   }
 }
 
-starwarsCharacters(movieId);
+getMovieCharacters(movieId);

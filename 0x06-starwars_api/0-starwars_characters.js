@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const util = require('util');
 const request = util.promisify(require('request'));
-const movieId = process.argv[2];
+const filmId = process.argv[2];
 
-async function getMovieCharacters (movieId) {
+async function starwarsCharacters (filmId) {
   const endpoint = 'https://swapi-api.alx-tools.com/api/films/' + filmId;
   let response = await (await request(endpoint)).body;
   response = JSON.parse(response);
@@ -17,4 +17,4 @@ async function getMovieCharacters (movieId) {
   }
 }
 
-getMovieCharacters(movieId);
+starwarsCharacters(filmId);

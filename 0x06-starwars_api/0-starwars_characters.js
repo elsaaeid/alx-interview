@@ -8,6 +8,8 @@
 
 
 const request = require('request-promise');
+const movieId = process.argv[2];
+
 
 async function getMovieCharacters(movieId) {
   try {
@@ -23,6 +25,4 @@ async function getMovieCharacters(movieId) {
     console.error('Error:', error);
   }
 }
-
-const movieId = process.argv[2];
 getMovieCharacters(movieId);

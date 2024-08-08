@@ -7,6 +7,9 @@
 const util = require('util');
 const request = util.promisify(require('request'));
 const movieId = process.argv[2];
+if (!movieId || isNaN(movieId)) {
+  process.exit(1);
+}
 
 async function getMovieCharacters (movieId) {
   try {

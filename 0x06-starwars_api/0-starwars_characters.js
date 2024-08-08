@@ -4,7 +4,7 @@ const request = util.promisify(require('request'));
 const movieId = process.argv[2];
 
 async function starwarsCharacters (movieId) {
-  const endpoint = 'https://swapi-api.alx-tools.com/api/films/' + filmId;
+  const endpoint = 'https://swapi-api.alx-tools.com/api/films/' + movieId;
   let response = await (await request(endpoint)).body;
   response = JSON.parse(response);
   const characters = response.characters;

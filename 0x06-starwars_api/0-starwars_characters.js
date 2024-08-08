@@ -1,8 +1,15 @@
+#!/usr/bin/node
+/**
+ * Entry point - makes requests to Star Wars API
+ * for movie info based movie ID passed as a CLI parameter.
+ * Retrieves movie character info then prints their names
+ * in order of appearance in the initial response.
+ */
 import sys
 import requests
 
 def get_movie_characters(movie_id):
-    url = f"https://swapi.dev/api/films/{movie_id}/"
+    url = f"https://swapi-api.alx-tools.com/api/films/{movie_id}/"
     response = requests.get(url)
     if response.status_code == 200:
         movie_data = response.json()

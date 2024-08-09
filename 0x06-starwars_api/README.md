@@ -58,8 +58,3 @@
     </pre>
   </li>
 </ul>
-
-
-    <span>
-         Replace 3 with the desired Movie ID.
-    </span>

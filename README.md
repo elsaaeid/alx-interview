@@ -45,4 +45,9 @@
 0x05-nqueens
       </a>
   </li>
+      <li>
+    <a href="https://github.com/elsaaeid/alx-interview/tree/master/0x06-starwars_api">
+0x06-starwars_api
+      </a>
+  </li>
 </ul>

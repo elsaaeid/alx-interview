@@ -39,11 +39,21 @@
     </code>
   </pre>
   </li>
+  
   <li>
     Navigate to the star-wars-api-script directory:
     <pre>
       <code>
         cd alx-interview/0x06-starwars_api
+      </code>
+    </pre>
+  </li>
+
+  <li>
+    Run the script with the Movie ID as a positional argument:
+    <pre>
+      <code>
+        ./0-starwars_characters.js 3
       </code>
     </pre>
   </li>

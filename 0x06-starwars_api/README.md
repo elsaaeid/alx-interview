@@ -47,14 +47,4 @@
       </code>
     </pre>
   </li>
-
-    <li>
-    Run the script with the Movie ID as a positional argument:
-    <pre>
-      <code>
-        ./0-starwars_characters.js 3
-      </code>
-    </pre>
-     Replace 3 with the desired Movie ID.
-  </li>
 </ul>

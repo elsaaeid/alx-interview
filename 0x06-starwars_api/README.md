@@ -56,11 +56,10 @@
         ./0-starwars_characters.js 3
       </code>
     </pre>
-
-    <span>
-         Replace 3 with the desired Movie ID.
-    </span>
   </li>
 </ul>
 
 
+    <span>
+         Replace 3 with the desired Movie ID.
+    </span>

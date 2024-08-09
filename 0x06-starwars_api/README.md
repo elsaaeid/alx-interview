@@ -20,8 +20,6 @@
   <li>
     Example: ./0-starwars_characters.js 3
   </li>
-</ul>
-
 <h2>
   Getting Started
 </h2>
@@ -55,5 +53,6 @@
         ./0-starwars_characters.js 3
       </code>
     </pre>
+     Replace 3 with the desired Movie ID.
   </li>
 </ul>

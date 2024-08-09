@@ -35,7 +35,7 @@
     Clone this repository:
   <pre>
     <code>
-      git clone https://github.com/mohdmuslim92/alx-interview.git
+      git clone https://github.com/elsaaeid/alx-interview.git
     </code>
   </pre>
   </li>

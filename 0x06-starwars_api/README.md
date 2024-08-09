@@ -20,6 +20,8 @@
   <li>
     Example: ./0-starwars_characters.js 3
   </li>
+</ul>
+
 <h2>
   Getting Started
 </h2>

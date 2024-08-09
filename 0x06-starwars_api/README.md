@@ -35,7 +35,7 @@
     Clone this repository:
   <pre>
     <code>
-      git clone https://github.com/elsaaeid/alx-interview.git
+      git clone https://github.com/elsaaeid/alx-interview/0x06-starwars_api.git
     </code>
   </pre>
   </li>

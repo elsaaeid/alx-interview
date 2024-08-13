@@ -50,4 +50,10 @@
 0x06-starwars_api
       </a>
   </li>
+  </li>
+      <li>
+    <a href="https://github.com/elsaaeid/alx-interview/tree/master/0x07-rotate_2d_matrix">
+0x07-rotate_2d_matrix
+      </a>
+  </li>
 </ul>

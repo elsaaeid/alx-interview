@@ -1,6 +1,6 @@
 <img src="image.gif" />
 
-  #### Welcome to common challenges we face in software engineering projects that help us:
+**Welcome to common challenges we face in software engineering projects that help us**:
 
 <ol>
   <li>

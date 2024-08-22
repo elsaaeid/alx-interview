@@ -13,10 +13,10 @@ def makeChange(coins, total):
     Return:
         Number of coins or -1 if meeting the total is not possible
     """
-    if total <= 0:
-        return 0
     if not coins or coins is None:
         return -1
+    if total <= 0:
+        return 0
 
     # Initialize a 1D array to store the minimum coins for each amount
     dp = [float('inf')] * (total + 1)

@@ -56,4 +56,9 @@
 0x07-rotate_2d_matrix
       </a>
   </li>
+   <li>
+    <a href="https://github.com/elsaaeid/alx-interview/tree/master/0x08-making_change">
+0x08-making_change
+      </a>
+  </li>
 </ul>

@@ -52,18 +52,18 @@ For the “0. Change comes from within” project, you will tackle a classic pro
   </ul>
   </li>
   <li>
+    GeeksforGeeks Articles:
     <ul>
-      GeeksforGeeks Articles:
       <li>
         <a href="https://www.geeksforgeeks.org/coin-change-dp-7/">Coin Change | DP-7</a></li>
       <li><a href="https://www.geeksforgeeks.org/greedy-algorithm-to-find-minimum-number-of-coins/">Greedy Algorithm to find Minimum number of Coins</a></li>
   </ul>
   </li>
   <li>
-  <ul>
     YouTube Tutorials:
-    <li><a href="https://www.youtube.com/watch?v=jgiZlGzXMBw">Dynamic Programming - Coin Change Problem for a visual and step-by-step explanation of the dynamic programming approach.</a></li>
-  </ul>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=jgiZlGzXMBw">Dynamic Programming - Coin Change Problem for a visual and step-by-step explanation of the dynamic programming approach.</a></li>
+    </ul>
   </li>
 </ul>
 

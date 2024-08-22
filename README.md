@@ -1,7 +1,7 @@
 <img src="image.gif" />
-<p>
-  Welcome to common challenges we face in software engineering projects that help us:
-</p>
+
+**Welcome to common challenges we face in software engineering projects that help us**:
+
 <ol>
   <li>
     Handling the technical complexity of the project.
@@ -48,6 +48,12 @@
       <li>
     <a href="https://github.com/elsaaeid/alx-interview/tree/master/0x06-starwars_api">
 0x06-starwars_api
+      </a>
+  </li>
+  </li>
+      <li>
+    <a href="https://github.com/elsaaeid/alx-interview/tree/master/0x07-rotate_2d_matrix">
+0x07-rotate_2d_matrix
       </a>
   </li>
 </ul>

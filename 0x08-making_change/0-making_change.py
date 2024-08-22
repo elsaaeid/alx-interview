@@ -13,7 +13,7 @@ def makeChange(coins, total):
     Return:
         Number of coins or -1 if meeting the total is not possible
     """
-    if not coins or coins is None:
+    if coins == [] or coins is None:
         return -1
     if total <= 0:
         return 0

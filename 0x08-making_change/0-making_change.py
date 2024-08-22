@@ -15,7 +15,7 @@ def makeChange(coins, total):
     """
     if total <= 0:
         return 0
-    if not coins:
+    if not coins or coins is None:
         return -1
 
     # Initialize a 1D array to store the minimum coins for each amount

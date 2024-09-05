@@ -59,6 +59,7 @@ For this project, you will need to leverage your understanding of prime numbers,
   </li>
 </ol>
 ### Resources:
+
 #### Prime Numbers and Sieve of Eratosthenes:
 
 <ul>
